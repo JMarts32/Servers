@@ -2,15 +2,18 @@ package TCP.Cliente;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.Random;
 
 public class Cliente {
     public static void main(String[] args) {
         try{
             String serverAddress = "localhost";
-            int serverPort = 12345;
+            int serverport = 23;
 
-            Socket socket = new Socket(serverAddress, serverPort);
-            System.out.println("Conectando con el servidor " + serverAddress + ":" + serverPort);
+            // Se inicia el socket del servidor para poder conectarse
+            Socket socket = new Socket(serverAddress, serverport);
+            System.out.println("Conectando con el servidor " + serverAddress + ":" + serverport);
+
 
             InputStream inputStream = socket.getInputStream();
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(inputStream));
