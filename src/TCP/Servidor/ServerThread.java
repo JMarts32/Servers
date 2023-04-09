@@ -3,8 +3,6 @@ package TCP.Servidor;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.time.Instant;
 
@@ -42,13 +40,14 @@ public class ServerThread extends Thread{
             // calculate the hash of the file
             MessageDigest digest = MessageDigest.getInstance("MD5");
 
-            // Comienza el proceso de envio del archivo al cliente
+            // starts the process of sending the file to the client
             OutputStream os = clientSocket.getOutputStream();
             FileInputStream fis = new FileInputStream(file);
 
             byte[] buffer = new byte[8192];
             int bytesRead;
 
+            // loads the file in chunks to be sent by the buffer
             Instant start = Instant.now();
             while ((bytesRead = fis.read(buffer)) != -1) {
                 os.write(buffer, 0, bytesRead);
@@ -56,24 +55,11 @@ public class ServerThread extends Thread{
             }
             Instant end = Instant.now();
 
-            synchronized (lock){
-                // Se escriben los logs dentro del archivo
-                FileWriter writer = new FileWriter(logFile);
-                writer.write("Archivo enviado: " + filename + "\n");
-                writer.write("Tamaño de archivo: " + file.length() + " bytes\n");
-                writer.write("Dirección IP del cliente: " + clientSocket.getInetAddress().toString() + "\n");
-                writer.write("Éxito de entrega: " + true + "\n");
-                writer.write("Tiempo de transferencia: " + (end.toEpochMilli() - start.toEpochMilli()) + " ms\n");
-                writer.flush();
-                writer.close();
-            }
-
             // Close streams
             dis.close();
             is.close();
             os.close();
             fis.close();
-            clientSocket.close();
 
             Socket communicationSocket;
             PrintWriter out;
@@ -89,6 +75,25 @@ public class ServerThread extends Thread{
             // Closes the missing streams
             out.close();
             communicationSocket.close();
+
+            // Receives the success confirmation by the user
+            BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            String sucessReceived = br.readLine();
+            br.close();
+
+            // Writes in the log
+            synchronized (lock){
+                PrintWriter writer = new PrintWriter(logFile);
+                writer.println("Archivo enviado: " + filename + "\n");
+                writer.println("Tamaño de archivo: " + file.length() + " bytes\n");
+                writer.println("Dirección IP del cliente: " + clientSocket.getInetAddress().toString() + "\n");
+                writer.println("CLiente: " + threadId + "\n");
+                writer.println("Éxito de entrega: " + sucessReceived + "\n");
+                writer.println("Tiempo de transferencia: " + (end.toEpochMilli() - start.toEpochMilli()) + " ms\n");
+                writer.close();
+            }
+
+            clientSocket.close();
 
 
         }catch (Exception e) {e.printStackTrace();}

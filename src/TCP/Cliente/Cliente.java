@@ -2,44 +2,32 @@ package TCP.Cliente;
 
 import java.io.*;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Cliente {
     public static void main(String[] args) {
         try{
-            String serverAddress = "localhost";
-            int serverport = 23;
 
-            // Se inicia el socket del servidor para poder conectarse
-            Socket socket = new Socket(serverAddress, serverport);
-            System.out.println("Conectando con el servidor " + serverAddress + ":" + serverport);
+            Scanner sc = new Scanner(System.in);
 
+            System.out.println("Enter the number of clients: ");
+            int numConexiones = sc.nextInt();
 
-            InputStream inputStream = socket.getInputStream();
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(inputStream));
+            // Creates the log entry
+            Date n = new Date();
+            SimpleDateFormat form = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+            String logName = form.format(n) + "-log.txt";
+            File logFile = new File("src/TCP/Cliente/Logs",logName);
+            logFile.createNewFile();
 
-            OutputStream outputStream = socket.getOutputStream();
-            PrintWriter outputWriter = new PrintWriter(outputStream, true);
-
-            String fileName = "archivo.txt";
-            outputWriter.println(fileName);
-
-            File file = new File(fileName);
-            FileInputStream fileInputStream = new FileInputStream(file);
-            byte[] buffer = new byte[1024];
-            int bytesRead;
-
-            while ((bytesRead = fileInputStream.read(buffer)) != -1) {
-                outputStream.write(buffer, 0, bytesRead);
+            for (int i = 1; i <= numConexiones; i++){
+                ClientThread client = new ClientThread(numConexiones,logFile, i);
+                client.start();
             }
 
-            fileInputStream.close();
-            System.out.println("Archivo " + fileName + " enviado");
-            String response = inputReader.readLine();
-            System.out.println(response);
-
-            socket.close();
-            System.out.println("Desconectado del servidor");
 
         }catch (Exception e) {e.printStackTrace();}
 
