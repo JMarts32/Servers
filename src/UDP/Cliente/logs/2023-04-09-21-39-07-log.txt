@@ -1,0 +1,16 @@
+Numero de clientes: 5
+El cliente 4 espera recibir 4097 chunks
+El cliente 1 espera recibir 4097 chunks
+El cliente 0 espera recibir 4097 chunks
+El cliente 2 espera recibir 4097 chunks
+El cliente 3 espera recibir 4097 chunks
+El cliente 0 no recibió todos los datagramas
+El cliente 4 no recibió todos los datagramas
+El cliente 1 no recibió todos los datagramas
+Cliente0 Terminado
+Cliente4 Terminado
+Cliente1 Terminado
+El cliente 2 no recibió todos los datagramas
+Cliente2 Terminado
+El cliente 3 no recibió todos los datagramas
+Cliente3 Terminado

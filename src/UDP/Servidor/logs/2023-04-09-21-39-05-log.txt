@@ -1,0 +1,6 @@
+Archivo a enviar: 250MB.txt
+Cliente 0-Tiempo de envío: 515 ms
+Cliente 4-Tiempo de envío: 515 ms
+Cliente 1-Tiempo de envío: 528 ms
+Cliente 2-Tiempo de envío: 559 ms
+Cliente 3-Tiempo de envío: 563 ms

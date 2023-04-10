@@ -1,0 +1,2 @@
+Archivo a enviar: 100MB.txt
+Cliente 0-Tiempo de envío: 87 ms

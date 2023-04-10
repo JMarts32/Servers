@@ -1,0 +1,11 @@
+Numero de clientes: 10
+El cliente 2 espera recibir 1639 chunks
+El cliente 1 espera recibir 1639 chunks
+El cliente 3 espera recibir 1639 chunks
+El cliente 5 espera recibir 1639 chunks
+El cliente 6 espera recibir 1639 chunks
+El cliente 0 espera recibir 1639 chunks
+El cliente 8 espera recibir 1639 chunks
+El cliente 7 espera recibir 1639 chunks
+El cliente 4 espera recibir 1639 chunks
+El cliente 9 espera recibir 1639 chunks

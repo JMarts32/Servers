@@ -1,0 +1,4 @@
+Numero de clientes: 1
+El cliente 0 espera recibir 1639 chunks
+El cliente 0 no recibió todos los datagramas
+Cliente0 Terminado

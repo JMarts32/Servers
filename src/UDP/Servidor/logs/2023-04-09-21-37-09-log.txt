@@ -1,0 +1,11 @@
+Archivo a enviar: 100MB.txt
+Cliente 8-Tiempo de envío: 444 ms
+Cliente 9-Tiempo de envío: 498 ms
+Cliente 7-Tiempo de envío: 501 ms
+Cliente 3-Tiempo de envío: 509 ms
+Cliente 1-Tiempo de envío: 513 ms
+Cliente 6-Tiempo de envío: 515 ms
+Cliente 0-Tiempo de envío: 519 ms
+Cliente 2-Tiempo de envío: 519 ms
+Cliente 5-Tiempo de envío: 521 ms
+Cliente 4-Tiempo de envío: 524 ms
