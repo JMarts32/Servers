@@ -56,14 +56,11 @@ public class ClientThread extends Thread{
             String hashCode  = new String(hash);
             boolean success;
 
-            PrintWriter out;
-            out = new PrintWriter(socket.getOutputStream());
+            //now we verify the integrity of the file
             if(hashReceived.equals(hashCode)){
                 success = true;
-                out.println("true");
             }else {
                 success = false;
-                out.println("false");
             }
 
             // Opens the file to verify its length
@@ -71,12 +68,13 @@ public class ClientThread extends Thread{
 
             // Writes in the log
             synchronized (lock){
-                FileWriter writer = new FileWriter(logFile);
-                writer.write("Archivo enviado: " + filename + "\n");
+                FileWriter writer = new FileWriter(logFile, true);
+                writer.write("Archivo recibido: " + filename + "\n");
                 writer.write("Tamaño de archivo: " + file.length() + " bytes\n");
-                writer.write("CLiente: " + clientId + "\n");
-                writer.write("Éxito de entrega: " + success + "\n");
+                writer.write("Cliente: " + clientId + "\n");
+                writer.write("Éxito de entrega: " + success+ "\n");
                 writer.write("Tiempo de transferencia: " + (end.toEpochMilli() - start.toEpochMilli()) + " ms\n");
+                writer.write("------------------------------------------\n");
                 writer.flush();
                 writer.close();
             }

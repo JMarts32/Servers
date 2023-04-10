@@ -57,8 +57,8 @@ public class ServerThread extends Thread{
 
             // Close streams
             dis.close();
-            is.close();
             os.close();
+            is.close();
             fis.close();
 
             Socket communicationSocket;
@@ -76,20 +76,17 @@ public class ServerThread extends Thread{
             out.close();
             communicationSocket.close();
 
-            // Receives the success confirmation by the user
-            BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            String sucessReceived = br.readLine();
-            br.close();
 
             // Writes in the log
             synchronized (lock){
-                PrintWriter writer = new PrintWriter(logFile);
-                writer.println("Archivo enviado: " + filename + "\n");
-                writer.println("Tamaño de archivo: " + file.length() + " bytes\n");
-                writer.println("Dirección IP del cliente: " + clientSocket.getInetAddress().toString() + "\n");
-                writer.println("CLiente: " + threadId + "\n");
-                writer.println("Éxito de entrega: " + sucessReceived + "\n");
-                writer.println("Tiempo de transferencia: " + (end.toEpochMilli() - start.toEpochMilli()) + " ms\n");
+                FileWriter writer = new FileWriter(logFile, true);
+                writer.write("Archivo enviado: " + filename + "\n");
+                writer.write("Tamaño de archivo: " + file.length() + " bytes\n");
+                writer.write("Dirección IP del cliente: " + clientSocket.getInetAddress().toString() + "\n");
+                writer.write("CLiente: " + threadId + "\n");
+                writer.write("Éxito de entrega: " + true + "\n");
+                writer.write("Tiempo de transferencia: " + (end.toEpochMilli() - start.toEpochMilli()) + " ms\n");
+                writer.write("------------------------------------------\n");
                 writer.close();
             }
 
