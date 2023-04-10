@@ -3,42 +3,48 @@ package TCP.Servidor;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
 
 public class Servidor {
+    private static ServerSocket serverSocket;
+    private static int port = 23;
+    private static ServerSocket communicationSocket;
     public static void main(String[] args) {
+        int threadId = 1;
+
+        // Starts the sockets for conection and comunication
         try{
-            ServerSocket serverSocket = new ServerSocket(12345);
-            System.out.println("Servidor iniciado");
+            serverSocket = new ServerSocket(port);
+            communicationSocket = new ServerSocket(8000);
+            System.out.println("Servidor TCP iniciado");
 
-            while (true) {
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("Cliente conectado desde " + clientSocket.getInetAddress());
+            // it opens and selects randomly a file from the folder
+            File folder = new File("src/TCP/Servidor/files");
+            File[] files = folder.listFiles();
+            Random random = new Random();
+            int randomIndex = random.nextInt(files.length);
 
-                InputStream inputStream = clientSocket.getInputStream();
-                BufferedReader inputReader = new BufferedReader(new InputStreamReader(inputStream));
+            // Creates the log entry
+            Date n = new Date();
+            SimpleDateFormat form = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+            String logName = form.format(n) + "-log.txt";
+            File logFile = new File("src/TCP/Servidor/Logs",logName);
+            logFile.createNewFile();
 
-                OutputStream outputStream = clientSocket.getOutputStream();
-                PrintWriter outputWriter = new PrintWriter(outputStream, true);
 
-                String fileName = inputReader.readLine();
-                System.out.println("Recibiendo archivo " + fileName);
+        // Here, the server accepts the clients and start each connection to a delegate
+        while (true) {
 
-                File file = new File(fileName);
-                FileOutputStream fileOutputStream = new FileOutputStream(file);
-                byte[] buffer = new byte[1024];
-                int bytesRead;
+            Socket clientSocket = serverSocket.accept();
+            System.out.println("Cliente conectado desde " + clientSocket.getInetAddress());
 
-                while ((bytesRead = inputStream.read(buffer)) != -1) {
-                    fileOutputStream.write(buffer, 0, bytesRead);
-                }
+            ServerThread delegate = new ServerThread(clientSocket, threadId, communicationSocket,randomIndex, files, folder, logFile);
+            threadId++;
+            delegate.start();
 
-                fileOutputStream.close();
-                System.out.println("Archivo " + fileName + " recibido");
-                outputWriter.println("Archivo " + fileName + " recibido correctamente");
-
-                clientSocket.close();
-                System.out.println("Cliente desconectado");
-            }
+        }
 
         }catch (Exception e ){e.printStackTrace();}
 
