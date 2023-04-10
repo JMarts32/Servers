@@ -1,0 +1,210 @@
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 11
+Éxito de entrega: true
+Tiempo de transferencia: 2772 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 7
+Éxito de entrega: true
+Tiempo de transferencia: 3072 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 2
+Éxito de entrega: true
+Tiempo de transferencia: 3063 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 30
+Éxito de entrega: true
+Tiempo de transferencia: 2762 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 17
+Éxito de entrega: true
+Tiempo de transferencia: 3061 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 28
+Éxito de entrega: true
+Tiempo de transferencia: 3076 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 21
+Éxito de entrega: true
+Tiempo de transferencia: 2822 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 27
+Éxito de entrega: true
+Tiempo de transferencia: 2946 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 1
+Éxito de entrega: true
+Tiempo de transferencia: 3088 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 23
+Éxito de entrega: true
+Tiempo de transferencia: 3097 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 8
+Éxito de entrega: true
+Tiempo de transferencia: 3112 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 4
+Éxito de entrega: true
+Tiempo de transferencia: 3117 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 3
+Éxito de entrega: true
+Tiempo de transferencia: 3149 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 15
+Éxito de entrega: true
+Tiempo de transferencia: 3151 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 12
+Éxito de entrega: true
+Tiempo de transferencia: 3193 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 14
+Éxito de entrega: true
+Tiempo de transferencia: 3184 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 18
+Éxito de entrega: true
+Tiempo de transferencia: 3185 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 25
+Éxito de entrega: true
+Tiempo de transferencia: 3185 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 22
+Éxito de entrega: true
+Tiempo de transferencia: 3202 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 10
+Éxito de entrega: true
+Tiempo de transferencia: 3207 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 20
+Éxito de entrega: true
+Tiempo de transferencia: 3215 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 24
+Éxito de entrega: true
+Tiempo de transferencia: 3222 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 5
+Éxito de entrega: true
+Tiempo de transferencia: 3242 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 29
+Éxito de entrega: true
+Tiempo de transferencia: 3244 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 13
+Éxito de entrega: true
+Tiempo de transferencia: 3238 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 16
+Éxito de entrega: true
+Tiempo de transferencia: 3231 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 9
+Éxito de entrega: true
+Tiempo de transferencia: 3238 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 19
+Éxito de entrega: true
+Tiempo de transferencia: 3238 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 26
+Éxito de entrega: true
+Tiempo de transferencia: 3237 ms
+------------------------------------------
+Archivo enviado: 100MB.txt
+Tamaño de archivo: 100000000 bytes
+Dirección IP del cliente: /127.0.0.1
+CLiente: 6
+Éxito de entrega: true
+Tiempo de transferencia: 3253 ms
+------------------------------------------
